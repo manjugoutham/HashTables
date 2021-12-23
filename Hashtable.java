@@ -69,6 +69,23 @@ public class Hashtable<K, V> {
 		return index;
 	}
 
+	public void remove(K word) {
+		Mynode currentNode = head;
+		Mynode previousNode = null;
+		while (currentNode != null && currentNode.getKey().equals(word)) {
+			head = currentNode.getNext();
+			return;
+		}
+		while (currentNode != null && !(currentNode.getKey().equals(word))) {
+			previousNode = currentNode;
+			currentNode = currentNode.getNext();
+		}
+		if (currentNode != null) {
+			previousNode.next = currentNode.next;
+		}
+		if (currentNode == null)
+			System.out.println("Not found");
+	}
 
 	@Override
 	public String toString() {

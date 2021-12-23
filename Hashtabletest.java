@@ -22,5 +22,7 @@ public class Hashtabletest {
 		}
 		//System.out.println(value);
 		System.out.println(hashtable);
+		hashtable.remove("avoidable");
+		System.out.println(hashtable);
 	}
 }
